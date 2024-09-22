@@ -1,7 +1,5 @@
 import React from "react";
-import Left from "../assets/left-chevron.svg";
 import CardsSidebar from "./CardsSidebar";
-import Image from "next/image";
 interface SidebarProps {
   setSelectedImage: any;
   images: any;

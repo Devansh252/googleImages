@@ -13,18 +13,15 @@ interface ImageData {
 
 function SearchResults() {
   const [images, setImages] = useState<ImageData[]>([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://picsum.photos/v2/list?page=2&limit=50")
       .then((response) => response.json())
       .then((data) => {
         setImages(data);
-        setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching images:", error);
-        setLoading(false);
       });
   }, []);
 
